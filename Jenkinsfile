@@ -16,7 +16,7 @@ pipeline {
                             def scannerHome = tool 'SonarScanner'
                             sh """
                                 ${scannerHome}/bin/sonar-scanner \
-                                  -Dsonar.projectKey=my-project \
+                                  -Dsonar.projectKey=my-jenkins-project \
                                   -Dsonar.sources=. \
                                   -Dsonar.host.url=http://sonarqube:9000 \
                                   -Dsonar.login=$SONAR_TOKEN
