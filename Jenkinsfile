@@ -11,9 +11,14 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('Sonar') {
-                    script {
-                        def scannerHome = tool name: 'SonarScanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
-                        sh "${scannerHome}/bin/sonar-scanner"
+                    withCredentials([string(credentialsId: 'sonar_token', variable: 'SONAR_TOKEN')]) {
+                        sh '''
+                            sonar-scanner \
+                              -Dsonar.projectKey=my-project \
+                              -Dsonar.sources=. \
+                              -Dsonar.host.url=http://sonarqube:9000 \
+                              -Dsonar.login=$SONAR_TOKEN
+                        '''
                     }
                 }
             }
