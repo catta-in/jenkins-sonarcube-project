@@ -1,1 +1,10 @@
-In this project an open source repository was used and the main goal was to set up Jenkins with SonarCube
+# jenkins-sonarqube-project
+
+ The project's goal was to set up Jenkins with SonarCube. An open source repository demo-playwright-workshop was used in this project.
+
+ ## Result
+
+- Jenkins runs the CI/CD pipeline
+- SonarQube analizes the code quality
+- Data is available on the SonarQube dashboard
+
