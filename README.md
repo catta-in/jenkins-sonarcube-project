@@ -1,6 +1,6 @@
 # jenkins-sonarqube-project
 
- The project's goal was to set up Jenkins with SonarCube. An open source repository demo-playwright-workshop was used in this project.
+ The project's goal was to set up Jenkins with SonarQube. An open source repository demo-playwright-workshop was used in this project.
 
  ## Result
 
